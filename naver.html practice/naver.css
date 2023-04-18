@@ -1,0 +1,20 @@
+/* Cascadig Style Sheet ? 부모 혹은 조상 태그를 덮어 쓸 수 있다 */
+/* 선택자(Selector) */ 
+
+div#header-center { 
+    width: 1130px; height: 100%; margin: 0 auto; padding: 0 30px;
+}
+/* div는 생략 가능, #은 id를 의미 */
+
+div#header-search > h1 { 
+    width: 222px; display: inline-block;
+}
+/* div#header-center h1 { } 자손 선택자 */
+
+#header-search h2 { 
+    display: none; 
+}
+
+#header-search fieldset {
+    width: 582px; display: inline-block;
+}
