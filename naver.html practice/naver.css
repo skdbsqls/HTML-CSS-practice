@@ -1,20 +1,85 @@
 /* Cascadig Style Sheet ? 부모 혹은 조상 태그를 덮어 쓸 수 있다 */
 /* 선택자(Selector) */ 
+* {
+    box-sizing: border-box;
+}
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
 
 div#header-center { 
-    width: 1130px; height: 100%; margin: 0 auto; padding: 0 30px;
+    width: 1130px; 
+    height: 100%; 
+    margin: 0 auto; 
+    padding: 0 30px;
 }
 /* div는 생략 가능, #은 id를 의미 */
 
-div#header-search > h1 { 
-    width: 222px; display: inline-block;
+#header-search a {
+    text-decoration: none;
+    vertical-align: top;
+}
+
+div#header-search h1 { 
+    width: 222px; 
+    height: 52px; 
+    margin: 0 auto; 
+    display: inline-block;
+    background-image: url(./네이버\ 이미지\ 소스.png);
+    background-size: 442px 428px;
+    background-position: 0 -158px;
+    background-repeat: no-repeat;
+    /* background: url(./네이버\ 이미지\ 소스.png) 0 -158px no-repeat; */
+    vertical-align: top;
+    content: '';
 }
 /* div#header-center h1 { } 자손 선택자 */
+
+#header-search h1 span {
+    display: none;
+}
 
 #header-search h2 { 
     display: none; 
 }
 
 #header-search fieldset {
-    width: 582px; display: inline-block;
+    position: relative;
+    width: 582px;
+    height: 52px;
+    margin-left: 10px;
+    display: inline-block;
+    border: 2px solid #19ce60; /* hex */
+    border-radius: 2px;
+    vertical-align: top;
+}
+
+#header-search fieldset input {
+    border: none;
+    outline: none;
+    vertical-align: top;
+}
+
+#header-center fieldset button {
+    width: 56px;
+    height: 50px;
+    border: none;
+    padding: 0;
+    background: #19ce60;
+}
+
+#search-image {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-image: url(./네이버\ 이미지\ 소스.png);
+    background-position: -420px -24px;
+    background-repeat: no-repeat;
+    background-size: 442px 428px;
 }
